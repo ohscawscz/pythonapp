@@ -1,0 +1,27 @@
+peat = '''
+죽는 날까지 하늘을 우러러
+한 점 부끄럼이 없기를,
+잎새에 이는 바람에도
+나는 괴로워했다.
+별을 노래하는 마음으로
+모든 죽어 가는 것을 사랑해야지
+그리고 나한테 주어진 길을
+걸어가야겠다.
+
+오늘 밤에도 별이 바람에 스치운다.
+'''
+
+file = None
+try:
+    # 1.파일 오픈 : 파일 객체 반환
+    file = open('서시.txt', 'w', encoding='utf-8')
+    # 1.파일에 쓰기
+    file.write(peat)
+    print('파일 쓰기 성공')
+
+except Exception as err:
+    print(f'err : {err}')
+finally:
+    if file is not None:
+        # 3. 리소스 해제
+        file.close()
